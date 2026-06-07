@@ -3,21 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=Space+Mono:wght@600;700&display=swap" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   
+
     <title><%= typeof title !== 'undefined' ? title : 'My Simple Website' %></title>
+    <style>
+      :root {
+        --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+        --font-display: "Space Grotesk", ui-sans-serif, sans-serif;
+        --font-mono: "Space Mono", ui-monospace, monospace;
+      }
+    </style>
+
   </head>
+
   <body class="min-h-screen bg-slate-950 text-slate-100 overflow-x-hidden">
 
   <!-- Navbar -->
-  <header class="sticky top-0 z-50 border-b border-cyan-500/10 bg-slate-950/80 backdrop-blur-xl">
+  <header class="font-display sticky top-0 z-50 border-b border-cyan-500/10 bg-slate-950/80 backdrop-blur-xl">
     <div class="mx-auto max-w-7xl px-6">
       <div class="flex h-20 items-center justify-between">
 
         <h1 class="text-3xl font-bold tracking-wide">
-          <span class="text-cyan-400">SAI</span>Tech
+          <span class="text-cyan-400  ">SAI</span>Tech
         </h1>
 
-        <nav class="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest">
+        <nav class="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-semibold">
           <a href="/" class="text-cyan-400 hover:text-cyan-400 font-bold hover:underline transition">Home</a>
           <a href="/about" class=" hover:text-cyan-400 hover:font-bold hover:underline  transition">About</a>
           <a href="/shop" class="hover:text-cyan-400 hover:font-bold hover:underline transition">Shop</a>
@@ -28,4 +42,4 @@
     </div>
   </header>
 
-    <main class="container mx-auto p-6 flex-grow bg-slate-950 my-6 shadow rounded">
+    <main class="container mx-auto p-6 flex-grow bg-slate-950 my-6 shadow rounded font-sans">
